@@ -5,7 +5,9 @@ private:
 	char* string;
 	unsigned int size;
 public:
+	// Constructeur par défaut
 	Chaine();
+	// Constructeur de recopie
 	Chaine(const Chaine &chaine);
 	Chaine(Chaine &&chaine);
 	Chaine(char *str);
