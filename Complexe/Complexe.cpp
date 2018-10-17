@@ -95,7 +95,7 @@ Complexe operator/(const Complexe & c1, double d)
 bool operator==(const Complexe & c1, const Complexe & c2)
 {
 
-	const double EPS = 0.0000000000001;
+	const double EPS = 0.0000001;
 	return std::fabs(c1.GetRe() - c2.GetRe()) < EPS
 		&& std::fabs(c1.GetIm() - c2.GetIm()) < EPS;
 }
