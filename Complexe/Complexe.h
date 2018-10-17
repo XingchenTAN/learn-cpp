@@ -21,6 +21,9 @@ public:
 };
 
 Complexe operator+(const Complexe &c1, const Complexe &c2);
+Complexe operator-(const Complexe &c1, const Complexe &c2);
+Complexe operator-(const Complexe &c1);
 Complexe operator/(const Complexe &c1, double d);
 bool operator==(const Complexe &c1, const Complexe &c2);
+bool operator!=(const Complexe &c1, const Complexe &c2);
 std::ostream& operator<<(std::ostream &o, const Complexe &c);

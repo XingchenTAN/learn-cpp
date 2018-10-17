@@ -70,6 +70,20 @@ Complexe operator+(const Complexe &c1, const Complexe &c2)
 	return(c);
 }
 
+Complexe operator-(const Complexe & c1, const Complexe & c2)
+{
+	Complexe c(c1.GetRe() - c2.GetRe(), c1.GetIm() - c2.GetIm());
+
+	return(c);
+}
+
+Complexe operator-(const Complexe & c1)
+{
+	Complexe c(-c1.GetRe() , -c1.GetIm());
+
+	return(c);
+}
+
 Complexe operator/(const Complexe & c1, double d)
 {
 	if (d == 0) throw new std::exception("division par zero");
@@ -84,6 +98,11 @@ bool operator==(const Complexe & c1, const Complexe & c2)
 	const double EPS = 0.0000000000001;
 	return std::fabs(c1.GetRe() - c2.GetRe()) < EPS
 		&& std::fabs(c1.GetIm() - c2.GetIm()) < EPS;
+}
+
+bool operator!=(const Complexe & c1, const Complexe & c2)
+{
+	return !(c1 == c2);
 }
 
 std::ostream & operator<<(std::ostream & o, const Complexe & c)
