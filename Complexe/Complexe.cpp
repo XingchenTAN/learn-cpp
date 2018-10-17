@@ -19,7 +19,7 @@ Complexe::Complexe(Complexe && obj) : reel(obj.reel), imaginaire(obj.imaginaire)
 
 Complexe::~Complexe()
 {
-	std::cout << "Destructeur par défaut" << std::endl;
+	std::cout << "Destructeur par dÃ©faut" << std::endl;
 }
 
 
@@ -48,7 +48,7 @@ double Complexe::Getmod()
 
 double Complexe::GetArg()
 {
-	return 0.0;
+	return std::atan(imaginaire/reel);
 }
 
 Complexe & Complexe::operator*=(double val)
